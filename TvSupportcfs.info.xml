@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<cfsInfo status="finished" infoWriteCounter="2" infoRejectCounter="0">
+  <summary>
+    <timer wall-clock="4.397s" wall="4.397" cpu="4.35898" calls="1"/>
+  </summary>
+  <header id="">
+    <environment started="2024-Jan-30 05:45:29" host="Prashanths-MacBook-Air.local"/>
+    <progOpts problem="TvSupportcfs" parameterFile="/Users/prashanthgadwala/Documents/Study material/Structural optimisation/topoptproject/TvSupport.xml" schemaPath="/Users/prashanthgadwala/openCFS/share/xml" meshFile="/Users/prashanthgadwala/Documents/Study material/Structural optimisation/topoptproject/TvSupport0.25-nx_80-ny_64-nz_48.mesh" logConfFile="" detailed="no">
+      <cfs version="23.11" name="Heavy Headache" build="RELEASE" git_commit="793632b056a6799c72a92053ca1bbaa2f80d9ed9" git_branch="master" compiled="Nov  7 2023" exe="cfs"/>
+      <openmp CFS_NUM_THREADS="1" VECLIB_MAXIMUM_THREADS="1" OMP_NUM_THREADS="1"/>
+    </progOpts>
+    <domain nx="80" ny="64" nz="48">
+      <grids>
+        <timer wall-clock="3.644s" wall="3.644" cpu="3.62382" calls="1"/>
+        <grid gridId="default" dimensions="3" elements="245760" nodes="257985"/>
+      </grids>
+      <coordinateSystems>
+        <system name="default"/>
+      </coordinateSystems>
+      <regions>
+        <region name="mech" id="0" type="volume" regular="yes" hom="yes" nodes="162435" elems="147456" isQuadratic="no"/>
+        <region name="solid" id="1" type="volume" regular="yes" hom="yes" nodes="108290" elems="98304" isQuadratic="no"/>
+      </regions>
+      <namedNodes>
+        <nodes name="left" count="3185"/>
+        <nodes name="right" count="3185"/>
+        <nodes name="bottom" count="3969"/>
+        <nodes name="top" count="3969"/>
+        <nodes name="back" count="5265"/>
+        <nodes name="front" count="5265"/>
+        <nodes name="left_bottom_back" count="1" coord="(0,0,0)"/>
+        <nodes name="right_bottom_back" count="1" coord="(10,0,0)"/>
+        <nodes name="left_top_back" count="1" coord="(0,8,0)"/>
+        <nodes name="right_top_back" count="1" coord="(10,8,0)"/>
+        <nodes name="left_bottom_front" count="1" coord="(0,0,6)"/>
+        <nodes name="right_bottom_front" count="1" coord="(10,0,6)"/>
+        <nodes name="left_top_front" count="1" coord="(0,8,6)"/>
+        <nodes name="right_top_front" count="1" coord="(10,8,6)"/>
+        <nodes name="bottom_back" count="81"/>
+        <nodes name="bottom_front" count="81"/>
+        <nodes name="bottom_left" count="49"/>
+        <nodes name="bottom_right" count="49"/>
+        <nodes name="top_back" count="81"/>
+        <nodes name="top_front" count="81"/>
+        <nodes name="top_left" count="49"/>
+        <nodes name="top_right" count="49"/>
+        <nodes name="back_left" count="65"/>
+        <nodes name="back_right" count="65"/>
+        <nodes name="front_left" count="65"/>
+        <nodes name="front_right" count="65"/>
+        <nodes name="force_1" count="5"/>
+        <nodes name="force_2" count="5"/>
+        <nodes name="force_3" count="5"/>
+        <nodes name="force_4" count="5"/>
+      </namedNodes>
+      <namedElements/>
+      <globalMathParser nx="80" ny="64" nz="48"/>
+    </domain>
+  </header>
+  <calculation>
+    <process/>
+  </calculation>
+</cfsInfo>
