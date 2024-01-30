@@ -1,11 +1,9 @@
 from mesh_tool import *  
 
-
 # dimensions of box (m)
 width = 10 # X axis
 height = 8 # Y axis
 depth = 6 # Z axis
-
 
 # resolution of based on x-resolution
 nx = 80 # t needs to match c * width/nx with c = 1,2,3,.. 
@@ -18,6 +16,7 @@ mesh = create_3d_mesh(nx, ny, nz, width, height, depth)
 # interface region: solid with thickness t (in m)
 t = 2*width/nx  # needs to match the discretization 
 print('Thickness of Tv Support t: ',t)
+
 # define regions
 for e in mesh.elements:
   x, y, z = mesh.calc_barycenter(e)
@@ -34,7 +33,6 @@ for e in mesh.elements:
     (9 < x < 10 and 0 < y < 8)) and 5.25 < z < 6:
     e.region = 'void'
     
-      
 # default region is 'mech'
     
 # define node set for "surface" load    
@@ -65,10 +63,9 @@ mesh.bc.append(('force_2', force_2))
 mesh.bc.append(('force_3', force_3))
 mesh.bc.append(('force_4', force_4))
             
-
 print('size of back_support/force_1/force_2/force_3/force_4', len(back_support), len(force_1), len(force_2), len(force_3), len(force_4))
     
-f = 'TvSupport' + str(t) + '-nx_' + str(nx) + '-ny_' + str(ny) + '-nz_' + str(nz) + '.mesh'   
+f = 'TvSupport-2' + str(t) + '-nx_' + str(nx) + '-ny_' + str(ny) + '-nz_' + str(nz) + '.mesh'   
        
 write_ansys_mesh(mesh, f)
 print('created ', f) 
