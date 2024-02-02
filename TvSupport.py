@@ -6,7 +6,7 @@ height = 8 # Y axis
 depth = 6 # Z axis
 
 # resolution of based on x-resolution
-nx = 500 # t needs to match c * width/nx with c = 1,2,3,.. 
+nx = 80 # t needs to match c * width/nx with c = 1,2,3,.. 
 ny = int((height/width) * nx)
 nz = int((depth/width) * nx)
 mesh = create_3d_mesh(nx, ny, nz, width, height, depth) 
